@@ -97,7 +97,7 @@ export interface BrandedFoodObjectItems {
      */
     traces?: Array<string>;
     /**
-     * An array of vitamins that can be found in this item
+     * An array of vitamins that are found in this item
      */
     vitamins?: Array<string>;
     /**
