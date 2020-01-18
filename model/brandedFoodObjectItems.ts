@@ -97,6 +97,10 @@ export interface BrandedFoodObjectItems {
      */
     traces?: Array<string>;
     /**
+     * An array of vitamins that can be found in this item
+     */
+    vitamins?: Array<string>;
+    /**
      * Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
      */
     commonName?: string;
