@@ -346,17 +346,17 @@ export class DefaultService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public ingredientSearchPhpGet(find: number, list: boolean, raw?: boolean, limit?: number, observe?: 'body', reportProgress?: boolean): Observable<IngredientObject>;
-    public ingredientSearchPhpGet(find: number, list: boolean, raw?: boolean, limit?: number, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<IngredientObject>>;
-    public ingredientSearchPhpGet(find: number, list: boolean, raw?: boolean, limit?: number, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<IngredientObject>>;
-    public ingredientSearchPhpGet(find: number, list: boolean, raw?: boolean, limit?: number, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public foodIngredientSearchPhpGet(find: number, list: boolean, raw?: boolean, limit?: number, observe?: 'body', reportProgress?: boolean): Observable<IngredientObject>;
+    public foodIngredientSearchPhpGet(find: number, list: boolean, raw?: boolean, limit?: number, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<IngredientObject>>;
+    public foodIngredientSearchPhpGet(find: number, list: boolean, raw?: boolean, limit?: number, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<IngredientObject>>;
+    public foodIngredientSearchPhpGet(find: number, list: boolean, raw?: boolean, limit?: number, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
 
         if (find === null || find === undefined) {
-            throw new Error('Required parameter find was null or undefined when calling ingredientSearchPhpGet.');
+            throw new Error('Required parameter find was null or undefined when calling foodIngredientSearchPhpGet.');
         }
 
         if (list === null || list === undefined) {
-            throw new Error('Required parameter list was null or undefined when calling ingredientSearchPhpGet.');
+            throw new Error('Required parameter list was null or undefined when calling foodIngredientSearchPhpGet.');
         }
 
 
@@ -395,7 +395,7 @@ export class DefaultService {
         const consumes: string[] = [
         ];
 
-        return this.httpClient.get<IngredientObject>(`${this.basePath}/ingredient/search.php`,
+        return this.httpClient.get<IngredientObject>(`${this.basePath}/food/ingredient/search.php`,
             {
                 params: queryParameters,
                 withCredentials: this.configuration.withCredentials,
