@@ -40,6 +40,10 @@ export interface BrandedFoodObjectNutrientsUsda {
      */
     median?: number;
     /**
+     * Nutrient rank
+     */
+    rank?: number;
+    /**
      * Number of observations on which the value is based
      */
     dataPoints?: number;
@@ -49,10 +53,6 @@ export interface BrandedFoodObjectNutrientsUsda {
     footnote?: string;
     /**
      * Description of the nutrient source
-     */
-    source?: string;
-    /**
-     * Description of how the food nutrient value was obtained
      */
     description?: string;
 }
