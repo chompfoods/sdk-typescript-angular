@@ -11,7 +11,7 @@
  */
 
 /**
- * Serving information from as seen on ChompThis.com
+ * Serving information from Chomp's internal database
  */
 export interface BrandedFoodObjectServingChomp { 
     /**

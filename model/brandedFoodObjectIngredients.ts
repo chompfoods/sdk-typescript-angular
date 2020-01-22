@@ -15,7 +15,7 @@
  */
 export interface BrandedFoodObjectIngredients { 
     /**
-     * This item's ingredients as seen on ChompThis.com
+     * Ingredients for this item from Chomp's internal database
      */
     chomp?: string;
     /**
