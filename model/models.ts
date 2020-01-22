@@ -19,6 +19,8 @@ export * from './brandedFoodObjectPackagingPhotosIngredients';
 export * from './brandedFoodObjectPackagingPhotosNutrition';
 export * from './brandedFoodObjectPortions';
 export * from './brandedFoodObjectServing';
+export * from './brandedFoodObjectServingChomp';
+export * from './brandedFoodObjectServingUsda';
 export * from './ingredientObject';
 export * from './ingredientObjectItems';
 export * from './ingredientObjectNutrients';

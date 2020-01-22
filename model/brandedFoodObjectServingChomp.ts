@@ -9,13 +9,13 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { BrandedFoodObjectServingChomp } from './brandedFoodObjectServingChomp';
-import { BrandedFoodObjectServingUsda } from './brandedFoodObjectServingUsda';
 
 /**
- * An object containing serving information for this item
+ * Serving information from as seen on ChompThis.com
  */
-export interface BrandedFoodObjectServing { 
-    chomp?: BrandedFoodObjectServingChomp;
-    usda?: BrandedFoodObjectServingUsda;
+export interface BrandedFoodObjectServingChomp { 
+    /**
+     * Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)
+     */
+    size?: string;
 }
