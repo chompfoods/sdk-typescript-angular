@@ -7,6 +7,7 @@ export * from './brandedFoodObjectDietLabels';
 export * from './brandedFoodObjectDietLabelsGlutenFree';
 export * from './brandedFoodObjectDietLabelsVegan';
 export * from './brandedFoodObjectDietLabelsVegetarian';
+export * from './brandedFoodObjectIngredients';
 export * from './brandedFoodObjectItems';
 export * from './brandedFoodObjectNutrients';
 export * from './brandedFoodObjectNutrientsChomp';

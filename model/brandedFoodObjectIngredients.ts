@@ -11,15 +11,15 @@
  */
 
 /**
- * An object containing basic packaging information about this item
+ * An object containing this item's ingredients in order of highest value to least
  */
-export interface BrandedFoodObjectPackage { 
+export interface BrandedFoodObjectIngredients { 
     /**
-     * Package quantity
+     * This item's ingredients as seen on ChompThis.com
      */
-    quantity?: number;
+    chomp?: string;
     /**
-     * Package size
+     * This branded food item's ingredients according to the USDA
      */
-    size?: string;
+    usda?: string;
 }
