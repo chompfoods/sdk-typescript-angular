@@ -15,13 +15,9 @@
  */
 export interface BrandedFoodObjectServing { 
     /**
-     * Serving size
+     * Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)
      */
-    size?: number;
-    /**
-     * Serving measurement unit (e.g. if measure is 3 tsp, the unit is tsp)
-     */
-    measurementUnit?: string;
+    size?: string;
     /**
      * Serving size description
      */
