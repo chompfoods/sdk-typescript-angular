@@ -9,46 +9,29 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { BrandedFoodObjectCalorieConversionFactor } from './brandedFoodObjectCalorieConversionFactor';
-import { BrandedFoodObjectDietLabels } from './brandedFoodObjectDietLabels';
-import { IngredientObjectComponents } from './ingredientObjectComponents';
-import { IngredientObjectNutrients } from './ingredientObjectNutrients';
-import { IngredientObjectPortions } from './ingredientObjectPortions';
 
 /**
- * An object containing information for this specific item.
+ * An object containing information on a specific component of this food item
  */
-export interface IngredientObjectItems { 
+export interface IngredientObjectComponents { 
     /**
-     * Item name as provided by brand owner or as shown on packaging
+     * The kind of component, e.g. bone
      */
     name?: string;
-    categories?: Array<string>;
-    nutrients?: IngredientObjectNutrients;
-    calorieConversionFactor?: BrandedFoodObjectCalorieConversionFactor;
     /**
-     * The multiplication factor used to calculate protein from nitrogen
+     * The weight of the component as a percentage of the total weight of the food
      */
-    proteinConversionFactor?: number;
-    dietLabels?: BrandedFoodObjectDietLabels;
+    pctWeight?: number;
     /**
-     * An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)
+     * The weight of the component in grams
      */
-    components?: Array<IngredientObjectComponents>;
+    gramWeight?: number;
     /**
-     * An array of objects containing information on discrete amounts of a food found in this item
+     * Whether the component is refuse, i.e. not edible
      */
-    portions?: Array<IngredientObjectPortions>;
+    isRefuse?: boolean;
     /**
-     * Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
+     * The number of obersvations on which the measure is based
      */
-    commonNames?: string;
-    /**
-     * A description of this item
-     */
-    description?: string;
-    /**
-     * Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
-     */
-    footnote?: string;
+    dataPoints?: number;
 }

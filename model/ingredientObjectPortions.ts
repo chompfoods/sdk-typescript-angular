@@ -9,46 +9,33 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { BrandedFoodObjectCalorieConversionFactor } from './brandedFoodObjectCalorieConversionFactor';
-import { BrandedFoodObjectDietLabels } from './brandedFoodObjectDietLabels';
-import { IngredientObjectComponents } from './ingredientObjectComponents';
-import { IngredientObjectNutrients } from './ingredientObjectNutrients';
-import { IngredientObjectPortions } from './ingredientObjectPortions';
 
 /**
- * An object containing information for this specific item.
+ * An object containing information on a specific food portion found in this item
  */
-export interface IngredientObjectItems { 
+export interface IngredientObjectPortions { 
     /**
-     * Item name as provided by brand owner or as shown on packaging
+     * The unit used for measure (e.g. if mesure is 3 tsp, the unit is tsp)
      */
-    name?: string;
-    categories?: Array<string>;
-    nutrients?: IngredientObjectNutrients;
-    calorieConversionFactor?: BrandedFoodObjectCalorieConversionFactor;
+    measurementUnit?: string;
     /**
-     * The multiplication factor used to calculate protein from nitrogen
-     */
-    proteinConversionFactor?: number;
-    dietLabels?: BrandedFoodObjectDietLabels;
-    /**
-     * An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)
-     */
-    components?: Array<IngredientObjectComponents>;
-    /**
-     * An array of objects containing information on discrete amounts of a food found in this item
-     */
-    portions?: Array<IngredientObjectPortions>;
-    /**
-     * Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
-     */
-    commonNames?: string;
-    /**
-     * A description of this item
+     * Comments that provide more specificity on the measure. For example, for a pizza measure the dissemination text might be 1 slice is 1/8th of a 14 inch pizza.
      */
     description?: string;
     /**
-     * Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
+     * Qualifier of the measure (e.g. related to food shape or form) (e.g. melted, crushed, diced)
+     */
+    modifier?: string;
+    /**
+     * The weight of the measure in grams
+     */
+    gramWeight?: number;
+    /**
+     * The number of observations on which the measure is based
+     */
+    dataPoints?: number;
+    /**
+     * Comments on any unusual aspects of the measure. Examples might includes caveats on the usage of a measure, or reasons why a measure gram weight is an unexpected value.
      */
     footnote?: string;
 }

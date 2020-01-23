@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 import { BrandedFoodObjectCalorieConversionFactor } from './brandedFoodObjectCalorieConversionFactor';
-import { BrandedFoodObjectComponents } from './brandedFoodObjectComponents';
 import { BrandedFoodObjectCountryDetails } from './brandedFoodObjectCountryDetails';
 import { BrandedFoodObjectDietFlags } from './brandedFoodObjectDietFlags';
 import { BrandedFoodObjectDietLabels } from './brandedFoodObjectDietLabels';
@@ -18,7 +17,6 @@ import { BrandedFoodObjectIngredients } from './brandedFoodObjectIngredients';
 import { BrandedFoodObjectNutrients } from './brandedFoodObjectNutrients';
 import { BrandedFoodObjectPackage } from './brandedFoodObjectPackage';
 import { BrandedFoodObjectPackagingPhotos } from './brandedFoodObjectPackagingPhotos';
-import { BrandedFoodObjectPortions } from './brandedFoodObjectPortions';
 import { BrandedFoodObjectServing } from './brandedFoodObjectServing';
 
 /**
@@ -53,14 +51,6 @@ export interface BrandedFoodObjectItems {
      */
     dietFlags?: Array<BrandedFoodObjectDietFlags>;
     packagingPhotos?: BrandedFoodObjectPackagingPhotos;
-    /**
-     * An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)
-     */
-    components?: Array<BrandedFoodObjectComponents>;
-    /**
-     * An array of objects containing information on discrete amounts of a food found in this item
-     */
-    portions?: Array<BrandedFoodObjectPortions>;
     /**
      * An array of ingredients in this item that may cause allergic reactions in people
      */
