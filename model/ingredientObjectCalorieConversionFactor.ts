@@ -9,46 +9,21 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { BrandedFoodObjectDietLabels } from './brandedFoodObjectDietLabels';
-import { IngredientObjectCalorieConversionFactor } from './ingredientObjectCalorieConversionFactor';
-import { IngredientObjectComponents } from './ingredientObjectComponents';
-import { IngredientObjectNutrients } from './ingredientObjectNutrients';
-import { IngredientObjectPortions } from './ingredientObjectPortions';
 
 /**
- * An object containing information for this specific item.
+ * An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.
  */
-export interface IngredientObjectItems { 
+export interface IngredientObjectCalorieConversionFactor { 
     /**
-     * Item name as provided by brand owner or as shown on packaging
+     * The multiplication factor for protein
      */
-    name?: string;
-    categories?: Array<string>;
-    nutrients?: IngredientObjectNutrients;
-    calorieConversionFactor?: IngredientObjectCalorieConversionFactor;
+    proteinValue?: number;
     /**
-     * The multiplication factor used to calculate protein from nitrogen
+     * The multiplication factor for fat
      */
-    proteinConversionFactor?: number;
-    dietLabels?: BrandedFoodObjectDietLabels;
+    fatValue?: number;
     /**
-     * An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)
+     * The multiplication factor for carbohydrates
      */
-    components?: Array<IngredientObjectComponents>;
-    /**
-     * An array of objects containing information on discrete amounts of a food found in this item
-     */
-    portions?: Array<IngredientObjectPortions>;
-    /**
-     * Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
-     */
-    commonNames?: string;
-    /**
-     * A description of this item
-     */
-    description?: string;
-    /**
-     * Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
-     */
-    footnote?: string;
+    carbohydrateValue?: number;
 }

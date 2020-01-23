@@ -1,5 +1,4 @@
 export * from './brandedFoodObject';
-export * from './brandedFoodObjectCalorieConversionFactor';
 export * from './brandedFoodObjectCountryDetails';
 export * from './brandedFoodObjectDietFlags';
 export * from './brandedFoodObjectDietLabels';
@@ -20,6 +19,7 @@ export * from './brandedFoodObjectServing';
 export * from './brandedFoodObjectServingChomp';
 export * from './brandedFoodObjectServingUsda';
 export * from './ingredientObject';
+export * from './ingredientObjectCalorieConversionFactor';
 export * from './ingredientObjectComponents';
 export * from './ingredientObjectItems';
 export * from './ingredientObjectNutrients';

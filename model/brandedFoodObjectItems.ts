@@ -9,7 +9,6 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { BrandedFoodObjectCalorieConversionFactor } from './brandedFoodObjectCalorieConversionFactor';
 import { BrandedFoodObjectCountryDetails } from './brandedFoodObjectCountryDetails';
 import { BrandedFoodObjectDietFlags } from './brandedFoodObjectDietFlags';
 import { BrandedFoodObjectDietLabels } from './brandedFoodObjectDietLabels';
@@ -40,11 +39,6 @@ export interface BrandedFoodObjectItems {
     serving?: BrandedFoodObjectServing;
     categories?: Array<string>;
     nutrients?: BrandedFoodObjectNutrients;
-    calorieConversionFactor?: BrandedFoodObjectCalorieConversionFactor;
-    /**
-     * The multiplication factor used to calculate protein from nitrogen
-     */
-    proteinConversionFactor?: number;
     dietLabels?: BrandedFoodObjectDietLabels;
     /**
      * An array of ingredient objects that were flagged while grading this item for compatibility with each diet
