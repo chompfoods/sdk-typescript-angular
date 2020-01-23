@@ -96,8 +96,4 @@ export interface BrandedFoodObjectItems {
      * An array of keywords that can be used to describe this item
      */
     keywords?: Array<string>;
-    /**
-     * Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
-     */
-    footnote?: string;
 }
