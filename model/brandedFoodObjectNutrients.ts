@@ -9,19 +9,33 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { BrandedFoodObjectNutrientsChomp } from './brandedFoodObjectNutrientsChomp';
-import { BrandedFoodObjectNutrientsUsda } from './brandedFoodObjectNutrientsUsda';
 
 /**
- * An object containing nutrient information from multiple sources
+ * An object containing information for a specific nutrient found in this food item
  */
 export interface BrandedFoodObjectNutrients { 
     /**
-     * An array containing an object for each nutrient data point
+     * Nutrient name
      */
-    chomp?: Array<BrandedFoodObjectNutrientsChomp>;
+    name?: string;
     /**
-     * An array containing an object for each nutrient data point as found in the USDA database
+     * Amount of the nutrient per 100g of food
      */
-    usda?: Array<BrandedFoodObjectNutrientsUsda>;
+    per100g?: number;
+    /**
+     * The unit used for the measure of this nutrient
+     */
+    measurementUnit?: string;
+    /**
+     * Nutrient rank
+     */
+    rank?: number;
+    /**
+     * Number of observations on which the value is based
+     */
+    dataPoints?: number;
+    /**
+     * Description of the nutrient source
+     */
+    description?: string;
 }

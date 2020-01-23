@@ -12,7 +12,6 @@
 import { BrandedFoodObjectCountryDetails } from './brandedFoodObjectCountryDetails';
 import { BrandedFoodObjectDietFlags } from './brandedFoodObjectDietFlags';
 import { BrandedFoodObjectDietLabels } from './brandedFoodObjectDietLabels';
-import { BrandedFoodObjectIngredients } from './brandedFoodObjectIngredients';
 import { BrandedFoodObjectNutrients } from './brandedFoodObjectNutrients';
 import { BrandedFoodObjectPackage } from './brandedFoodObjectPackage';
 import { BrandedFoodObjectPackagingPhotos } from './brandedFoodObjectPackagingPhotos';
@@ -34,11 +33,17 @@ export interface BrandedFoodObjectItems {
      * The brand name that owns this item
      */
     brand?: string;
-    ingredients?: BrandedFoodObjectIngredients;
+    /**
+     * This food item's ingredients from greatest quantity to least
+     */
+    ingredients?: string;
     _package?: BrandedFoodObjectPackage;
     serving?: BrandedFoodObjectServing;
     categories?: Array<string>;
-    nutrients?: BrandedFoodObjectNutrients;
+    /**
+     * An array containing nutrient informatio objects for this food item
+     */
+    nutrients?: Array<BrandedFoodObjectNutrients>;
     dietLabels?: BrandedFoodObjectDietLabels;
     /**
      * An array of ingredient objects that were flagged while grading this item for compatibility with each diet

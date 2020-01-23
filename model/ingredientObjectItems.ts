@@ -24,7 +24,10 @@ export interface IngredientObjectItems {
      */
     name?: string;
     categories?: Array<string>;
-    nutrients?: IngredientObjectNutrients;
+    /**
+     * An array containing nutrient informatio objects for this food item
+     */
+    nutrients?: Array<IngredientObjectNutrients>;
     calorieConversionFactor?: IngredientObjectCalorieConversionFactor;
     /**
      * The multiplication factor used to calculate protein from nitrogen

@@ -9,14 +9,49 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { BrandedFoodObjectNutrientsUsda } from './brandedFoodObjectNutrientsUsda';
 
 /**
- * An object containing nutrient information from each source
+ * An object containing information for a specific nutrient found in this food item
  */
 export interface IngredientObjectNutrients { 
     /**
-     * An array containing an object for each nutrient data point as found in the USDA database
+     * Nutrient name
      */
-    usda?: Array<BrandedFoodObjectNutrientsUsda>;
+    name?: string;
+    /**
+     * Amount of the nutrient per 100g of food
+     */
+    per100g?: number;
+    /**
+     * The unit used for the measure of this nutrient
+     */
+    measurementUnit?: string;
+    /**
+     * Minimum nutrient value
+     */
+    min?: number;
+    /**
+     * Maximum nutrient value
+     */
+    max?: number;
+    /**
+     * Median nutrient value
+     */
+    median?: number;
+    /**
+     * Nutrient rank
+     */
+    rank?: number;
+    /**
+     * Number of observations on which the value is based
+     */
+    dataPoints?: number;
+    /**
+     * Comments on any unusual aspect of the food nutrient. Examples might include why a nutrient value is different than typically expected.
+     */
+    footnote?: string;
+    /**
+     * Description of the nutrient source
+     */
+    description?: string;
 }
