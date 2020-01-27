@@ -286,25 +286,20 @@ export class DefaultService {
 
     /**
      * Get raw/generic food ingredient item(s)
-     * ## Get data for a specific ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** &gt; &#x60;&#x60;&#x60;https://chompthis.com/api/v2/ingredient/search.php?api_key&#x3D;API_KEY&amp;find&#x3D;broccoli&amp;raw&#x3D;true&#x60;&#x60;&#x60;  **Example #2: Set of Ingredients** &gt; &#x60;&#x60;&#x60;https://chompthis.com/api/v2/ingredient/search.php?api_key&#x3D;API_KEY&amp;find&#x3D;broccoli,cauliflower,spinach&amp;list&#x3D;true&amp;raw&#x3D;true&#x60;&#x60;&#x60;  **Tips**   * Expose ingredient endpoints by using our **[food lookup tool](https://chompthis.com/api/lookup.php)**.  &gt; This API endpoint is only available to Standard and Premium API subscribers. Please consider upgrading your subscription if you are subscribed to the Limited plan. **[Read this](https://desk.zoho.com/portal/chompthis/kb/articles/can-i-upgrade-downgrade-my-subscription)** if you aren&#x27;t sure how to upgrade your subscription. 
-     * @param find Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;broccoli&#x60;&#x60;&#x60;  **Example #2: Set of Ingredients** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;broccoli,cauliflower,spinach&amp;list&#x3D;true&#x60;&#x60;&#x60;  **Important Notes**    * Set the \&quot;list\&quot; parameter to \&quot;true\&quot; before passing in a comma-separated list of ingredients.   * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients. 
-     * @param list #### Setting &#x60;&#x60;&#x60;&amp;list&#x3D;true&#x60;&#x60;&#x60; will configure this endpoint to allow searching for ingredients using a comma-separated list. By default, this endpoint will **only** return results for the first ingredient.  **Example** &gt; &#x60;&#x60;&#x60;&amp;list&#x3D;true&#x60;&#x60;&#x60; 
+     * ## Get data for a specific ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** &gt; &#x60;&#x60;&#x60;https://chompthis.com/api/v2/ingredient/search.php?api_key&#x3D;API_KEY&amp;find&#x3D;broccoli&#x60;&#x60;&#x60;  **Example #2: Set of Ingredients** &gt; &#x60;&#x60;&#x60;https://chompthis.com/api/v2/ingredient/search.php?api_key&#x3D;API_KEY&amp;find&#x3D;broccoli,cauliflower,spinach&#x60;&#x60;&#x60;  **Tips**   * Expose ingredient endpoints by using our **[food lookup tool](https://chompthis.com/api/lookup.php)**.  &gt; This API endpoint is only available to Standard and Premium API subscribers. Please consider upgrading your subscription if you are subscribed to the Limited plan. **[Read this](https://desk.zoho.com/portal/chompthis/kb/articles/can-i-upgrade-downgrade-my-subscription)** if you aren&#x27;t sure how to upgrade your subscription. 
+     * @param find Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;broccoli&#x60;&#x60;&#x60;  **Example #2: Set of Ingredients** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;broccoli,cauliflower,spinach&#x60;&#x60;&#x60;  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients. 
      * @param raw #### Optionally filter the search result to only include raw ingredients.  **Example** &gt; &#x60;&#x60;&#x60;&amp;raw&#x3D;true&#x60;&#x60;&#x60; 
      * @param limit #### Set maximum number of records you want the API to return, per search term.  **Example** &gt; &#x60;&#x60;&#x60;&amp;limit&#x3D;3&#x60;&#x60;&#x60; 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public foodIngredientSearchPhpGet(find: number, list: boolean, raw?: boolean, limit?: number, observe?: 'body', reportProgress?: boolean): Observable<IngredientObject>;
-    public foodIngredientSearchPhpGet(find: number, list: boolean, raw?: boolean, limit?: number, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<IngredientObject>>;
-    public foodIngredientSearchPhpGet(find: number, list: boolean, raw?: boolean, limit?: number, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<IngredientObject>>;
-    public foodIngredientSearchPhpGet(find: number, list: boolean, raw?: boolean, limit?: number, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public foodIngredientSearchPhpGet(find: number, raw?: boolean, limit?: number, observe?: 'body', reportProgress?: boolean): Observable<IngredientObject>;
+    public foodIngredientSearchPhpGet(find: number, raw?: boolean, limit?: number, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<IngredientObject>>;
+    public foodIngredientSearchPhpGet(find: number, raw?: boolean, limit?: number, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<IngredientObject>>;
+    public foodIngredientSearchPhpGet(find: number, raw?: boolean, limit?: number, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
 
         if (find === null || find === undefined) {
             throw new Error('Required parameter find was null or undefined when calling foodIngredientSearchPhpGet.');
-        }
-
-        if (list === null || list === undefined) {
-            throw new Error('Required parameter list was null or undefined when calling foodIngredientSearchPhpGet.');
         }
 
 
@@ -312,9 +307,6 @@ export class DefaultService {
         let queryParameters = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
         if (find !== undefined && find !== null) {
             queryParameters = queryParameters.set('find', <any>find);
-        }
-        if (list !== undefined && list !== null) {
-            queryParameters = queryParameters.set('list', <any>list);
         }
         if (raw !== undefined && raw !== null) {
             queryParameters = queryParameters.set('raw', <any>raw);
