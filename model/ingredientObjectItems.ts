@@ -45,15 +45,15 @@ export interface IngredientObjectItems {
      */
     commonName?: string;
     /**
-     * Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
+     * Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall
      */
     footnote?: string;
     /**
-     * The original search term that found this food item.
+     * The original search term that found this food item
      */
     searchTerm?: string;
     /**
-     * A value that represents how similar the name of this food item is to the original search term.
+     * A value that represents how similar the name of this food item is to the original search term. The lower the value the closer this item's name is to the original search term.
      */
     score?: string;
 }
