@@ -48,4 +48,12 @@ export interface IngredientObjectItems {
      * Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
      */
     footnote?: string;
+    /**
+     * The original search term that found this food item.
+     */
+    searchTerm?: string;
+    /**
+     * A value that represents how similar the name of this food item is to the original search term.
+     */
+    score?: string;
 }
