@@ -9,7 +9,6 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { BrandedFoodObjectDietLabels } from './brandedFoodObjectDietLabels';
 import { IngredientObjectCalorieConversionFactor } from './ingredientObjectCalorieConversionFactor';
 import { IngredientObjectComponents } from './ingredientObjectComponents';
 import { IngredientObjectNutrients } from './ingredientObjectNutrients';
@@ -33,7 +32,6 @@ export interface IngredientObjectItems {
      * The multiplication factor used to calculate protein from nitrogen
      */
     proteinConversionFactor?: number;
-    dietLabels?: BrandedFoodObjectDietLabels;
     /**
      * An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)
      */
@@ -46,10 +44,6 @@ export interface IngredientObjectItems {
      * Common name associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
      */
     commonName?: string;
-    /**
-     * A description of this item
-     */
-    description?: string;
     /**
      * Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
      */
