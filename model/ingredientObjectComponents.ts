@@ -9,14 +9,29 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { BrandedFoodObjectItems } from './brandedFoodObjectItems';
 
 /**
- * Please read the description of each field in this API response object example. By default, the value of each field is **null**. This indicates an unknown state or that no data exists.
+ * An object containing information on a specific component of this food item
  */
-export interface BrandedFoodObject { 
+export interface IngredientObjectComponents { 
     /**
-     * An array containing an object for each individual item returned by your API call.
+     * The kind of component, e.g. bone
      */
-    items?: Array<BrandedFoodObjectItems>;
+    name?: string;
+    /**
+     * The weight of the component as a percentage of the total weight of the food
+     */
+    pctWeight?: number;
+    /**
+     * The weight of the component in grams
+     */
+    gramWeight?: number;
+    /**
+     * Whether the component is refuse, i.e. not edible
+     */
+    isRefuse?: boolean;
+    /**
+     * The number of obersvations on which the measure is based
+     */
+    dataPoints?: number;
 }

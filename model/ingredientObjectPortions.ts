@@ -9,14 +9,33 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { BrandedFoodObjectItems } from './brandedFoodObjectItems';
 
 /**
- * Please read the description of each field in this API response object example. By default, the value of each field is **null**. This indicates an unknown state or that no data exists.
+ * An object containing information on a specific food portion found in this item
  */
-export interface BrandedFoodObject { 
+export interface IngredientObjectPortions { 
     /**
-     * An array containing an object for each individual item returned by your API call.
+     * The unit used for measure (e.g. if mesure is 3 tsp, the unit is tsp)
      */
-    items?: Array<BrandedFoodObjectItems>;
+    measurementUnit?: string;
+    /**
+     * Comments that provide more specificity on the measure. For example, for a pizza measure the dissemination text might be 1 slice is 1/8th of a 14 inch pizza.
+     */
+    description?: string;
+    /**
+     * Qualifier of the measure (e.g. related to food shape or form) (e.g. melted, crushed, diced)
+     */
+    modifier?: string;
+    /**
+     * The weight of the measure in grams
+     */
+    gramWeight?: number;
+    /**
+     * The number of observations on which the measure is based
+     */
+    dataPoints?: number;
+    /**
+     * Comments on any unusual aspects of the measure. Examples might includes caveats on the usage of a measure, or reasons why a measure gram weight is an unexpected value.
+     */
+    footnote?: string;
 }
