@@ -9,21 +9,37 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+import { RecipeObjectAttributes } from './recipeObjectAttributes';
+import { RecipeObjectIngredients } from './recipeObjectIngredients';
+import { RecipeObjectMeta } from './recipeObjectMeta';
+import { RecipeObjectNutrients } from './recipeObjectNutrients';
 
 /**
- * An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.
+ * An object containing information for this specific item.
  */
-export interface IngredientObjectCalorieConversionFactor { 
+export interface RecipeObjectItems { 
     /**
-     * The multiplication factor for protein
+     * Unique recipe ID
      */
-    proteinValue?: number;
+    id?: string;
     /**
-     * The multiplication factor for fat
+     * Recipe title
      */
-    fatValue?: number;
+    title?: string;
+    meta?: RecipeObjectMeta;
+    categories?: Array<string>;
     /**
-     * The multiplication factor for carbohydrates
+     * The author of this recipe. You must attribute this author when displaying this recipe.
      */
-    carbohydrateValue?: number;
+    author?: string;
+    keywords?: Array<string>;
+    topics?: Array<string>;
+    attributes?: RecipeObjectAttributes;
+    /**
+     * An array containing this recipe's ingredients
+     */
+    ingredients?: Array<RecipeObjectIngredients>;
+    baseIngredients?: Array<string>;
+    nutrients?: RecipeObjectNutrients;
+    diabeticExchanges?: Array<string>;
 }

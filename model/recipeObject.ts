@@ -9,21 +9,14 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+import { RecipeObjectItems } from './recipeObjectItems';
 
 /**
- * An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.
+ * Please read the description of each field in this API response object example. By default, the value of each field is **null**. This indicates an unknown state or that no data exists.
  */
-export interface IngredientObjectCalorieConversionFactor { 
+export interface RecipeObject { 
     /**
-     * The multiplication factor for protein
+     * An array containing an object for each individual item returned by your API call.
      */
-    proteinValue?: number;
-    /**
-     * The multiplication factor for fat
-     */
-    fatValue?: number;
-    /**
-     * The multiplication factor for carbohydrates
-     */
-    carbohydrateValue?: number;
+    items?: Array<RecipeObjectItems>;
 }

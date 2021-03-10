@@ -10,20 +10,17 @@
  * Do not edit the class manually.
  */
 
-/**
- * An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.
- */
-export interface IngredientObjectCalorieConversionFactor { 
+export interface RecipeObjectNutrientsCalories { 
     /**
-     * The multiplication factor for protein
+     * Nutrient name
      */
-    proteinValue?: number;
+    title?: string;
     /**
-     * The multiplication factor for fat
+     * The amount of this nutrient in this recipe
      */
-    fatValue?: number;
+    value?: string;
     /**
-     * The multiplication factor for carbohydrates
+     * The daily recommended percent total for this nutrient
      */
-    carbohydrateValue?: number;
+    percent?: string;
 }

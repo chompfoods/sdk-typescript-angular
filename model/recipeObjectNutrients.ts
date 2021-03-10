@@ -9,21 +9,30 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+import { RecipeObjectNutrientsCalories } from './recipeObjectNutrientsCalories';
 
 /**
- * An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.
+ * An object containing nutrient information for this recipe
  */
-export interface IngredientObjectCalorieConversionFactor { 
+export interface RecipeObjectNutrients { 
     /**
-     * The multiplication factor for protein
+     * An array containing information for calories found in this recipe
      */
-    proteinValue?: number;
+    calories?: Array<RecipeObjectNutrientsCalories>;
     /**
-     * The multiplication factor for fat
+     * An array containing information for this recipe's daily recommended value of certain nutrients
      */
-    fatValue?: number;
+    dailyValues?: Array<RecipeObjectNutrientsCalories>;
     /**
-     * The multiplication factor for carbohydrates
+     * An array containing information for fat found in this recipe
      */
-    carbohydrateValue?: number;
+    fat?: Array<RecipeObjectNutrientsCalories>;
+    /**
+     * An array containing information for carbs found in this recipe
+     */
+    carbs?: Array<RecipeObjectNutrientsCalories>;
+    /**
+     * An array containing information for vitamins found in this recipe
+     */
+    vitamins?: Array<RecipeObjectNutrientsCalories>;
 }

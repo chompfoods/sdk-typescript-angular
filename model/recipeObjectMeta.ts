@@ -9,21 +9,35 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+import { RecipeObjectMetaImages } from './recipeObjectMetaImages';
 
 /**
- * An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.
+ * An object containing this item's compatibility grades for each supported diet
  */
-export interface IngredientObjectCalorieConversionFactor { 
+export interface RecipeObjectMeta { 
     /**
-     * The multiplication factor for protein
+     * URL to the recipe. You must link back to the recipe when displaying it.
      */
-    proteinValue?: number;
+    url?: string;
+    images?: RecipeObjectMetaImages;
     /**
-     * The multiplication factor for fat
+     * The source of the recipe. You must attribute this source when displaying this recipe.
      */
-    fatValue?: number;
+    source?: string;
     /**
-     * The multiplication factor for carbohydrates
+     * This recipe's cuisine
      */
-    carbohydrateValue?: number;
+    cuisine?: string;
+    /**
+     * The date when this recipe was created
+     */
+    created?: string;
+    /**
+     * The date when this recipe was most recently modified
+     */
+    modified?: string;
+    /**
+     * Additional information about this recipe's nutrients
+     */
+    nutrientsNotice?: string;
 }

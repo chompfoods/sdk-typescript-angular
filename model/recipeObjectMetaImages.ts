@@ -11,19 +11,35 @@
  */
 
 /**
- * An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.
+ * An object containing this recipe's image URLs
  */
-export interface IngredientObjectCalorieConversionFactor { 
+export interface RecipeObjectMetaImages { 
     /**
-     * The multiplication factor for protein
+     * Extra large recipe image
      */
-    proteinValue?: number;
+    extraLarge?: string;
     /**
-     * The multiplication factor for fat
+     * Large recipe image
      */
-    fatValue?: number;
+    large?: string;
     /**
-     * The multiplication factor for carbohydrates
+     * Standard recipe image
      */
-    carbohydrateValue?: number;
+    standard?: string;
+    /**
+     * Grid view recipe image
+     */
+    gridView?: string;
+    /**
+     * Small recipe image
+     */
+    small?: string;
+    /**
+     * Thumbnail recipe image
+     */
+    thumbnail?: string;
+    /**
+     * Extra small recipe image
+     */
+    extraSmall?: string;
 }
